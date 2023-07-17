@@ -1,7 +1,7 @@
 console.log("JavaScript is ready to run");
 var playersInput = document.getElementById('players__input');
 var playersList = document.getElementsByClassName('players__list') [0];
-var players = [];
+var players = []; // this is array of plaryers list
 
 function addPlayer(nombre, lista) {
     var player = nombre.value;
@@ -13,11 +13,11 @@ function addPlayer(nombre, lista) {
         let new_element = document.createElement('li');
         new_element.textContent = player;
         new_element.classList.add('list_item')
-        if (lista && typeof lista.appendChild === 'function') {
+        // if (lista && typeof lista.appendChild === 'function') {
             lista.appendChild(new_element);
-        } else {
-            console.error("Error: Invalid 'lista' element.");
-        }
+        // } else {
+            // console.error("Error: Invalid 'lista' element.");
+        // }
 
 
         //clear input
