@@ -1,14 +1,21 @@
 console.log("JavaScript is ready to run");
 var playersInput = document.getElementById('players__input');
-var playersList = document.getElementsByClassName('players__list') [0];
+var playersList = document.getElementsByClassName('players__list')[0];
 var players = []; // this is array of plaryers list
+const arrayP = ['jorge', 'karol', 'jjulian', 'andrews', 'carlos', 'melany', 'juan']
 
-var killButton = document.getElementById('kill__button')
-var playerContainer = document.getElementsByClassName('player__container') [0]
+const killButton = document.getElementById('kill__button')
+var playerContainer = document.getElementsByClassName('player__container')[0]
+const nextButton = document.getElementById('next__button')
+const overLay = document.getElementById('overlay')
+const continueButton = document.getElementById('btn__continue')
+const playerEliminated = document.getElementsByClassName('player__eliminated')[0]
+let selectPlayer;
+
 
 
 function addPlayer(nombre, lista) {
-    var player = nombre.value;
+    const player = nombre.value;
     console.log(player)
     if (player !== '') {
         players.push(player);
@@ -17,37 +24,64 @@ function addPlayer(nombre, lista) {
         let new_element = document.createElement('li');
         new_element.textContent = player;
         new_element.classList.add('list_item') // class of list 'li'
-        // if (lista && typeof lista.appendChild === 'function') {
-            lista.appendChild(new_element);
-        // } else {
-            // console.error("Error: Invalid 'lista' element.");
-        // }
-
-
+        lista.appendChild(new_element);
         //clear input
         nombre.value = '';
     }
 }
 
-function killPlayer (playersArray, playerCont){
-    let activePlayers = [...playersArray] /// clone players array.
-    while (activePlayers.length > 1) {
-        const playerRamdom = Math.floor(Math.random() * activePlayers.length); // select player ramdom in array
-        const selectPlayer = activePlayers[playerRamdom] // name of player select 
-        activePlayers.splice(playerRamdom, 1) //Delete playerselect ramdom
-        let newNameElement = document.createElement('h4');
-        newNameElement.textContent = selectPlayer;
-        playerCont.appendChild(newNameElement);
 
+function nextPlayer(playersArray, containerPlayer) {
+
+    if (playersArray.length === 1) {
+        const winner = playersArray[0];
+        console.log('El ganador es: ', winner);
+        alert('¡El ganador es: ' + winner + '!')
     }
-    const winingPlayer = activePlayers[0];
+
+    const playerRamdom = Math.floor(Math.random() * playersArray.length); // select player ramdom in array
+    selectPlayer = playersArray[playerRamdom] // name of player select 
+    playersArray.splice(playerRamdom, 1) //Delete playerselect ramdom
+    
+
+    let newNameElement = document.createElement('h4');
+    newNameElement.textContent = selectPlayer;
+    containerPlayer.appendChild(newNameElement);
+    console.log(playersArray)
 
 }
 
-document.getElementById("save").addEventListener('click', function () {
-    addPlayer(playersInput, playersList)
-});
+
+function killPlayer(containerPlayer, elimatedPlayer) {
+    while (containerPlayer.firstChild) {
+        containerPlayer.removeChild(containerPlayer.firstChild);
+        //pendiende agregar animacion de muerte
+
+        setTimeout(function () {
+            overLay.classList.add('active');
+        }, 2000);
+    playerEliminated.textContent = elimatedPlayer + ' ha muerto'
+    }
+}
+
+
+//Event list:
+
+
+// document.getElementById("save").addEventListener('click', function () {
+//     addPlayer(playersInput, playersList)
+// });
+
+nextButton.addEventListener('click', function () {
+    nextPlayer(arrayP, playerContainer)
+})
 
 killButton.addEventListener('click', function () {
-    killPlayer(players, playerContainer)
+    killPlayer(playerContainer, selectPlayer)
 })
+
+continueButton.addEventListener('click', function(){
+    overLay.classList.remove('active')
+})
+
+
