@@ -5,16 +5,16 @@ var players = []; // this is array of players list
 
 function addPlayer(nombre, lista) {
     var player = nombre.value;
-    let eraserButton = document.createElement('button')
-    let new_element = document.createElement('li');
     console.log(player)
     if (player !== '') {
         players.push(player);
         console.log(players)
 
+        let eraserButton = document.createElement('button')
         eraserButton.classList.add('eraser')
-        new_element.classList.add('list_item')
+        let new_element = document.createElement('li');
         new_element.textContent = player;
+        new_element.classList.add('list_item')
 
         // if (lista && typeof lista.appendChild === 'function') {
             lista.appendChild(new_element);
@@ -25,12 +25,12 @@ function addPlayer(nombre, lista) {
 
         //clear input
         nombre.value = '';
+        eraserButton.addEventListener('click', erasePlayer(player, new_element))
     }
-    eraserButton.addEventListener('click', erasePlayer(player, eraserButton))
 }
 
-function erasePlayer(player, eraserButton){
-
+function erasePlayer(player, new_element){
+    players.pop()
 }
 
 document.getElementById("save").addEventListener('click', function () {
