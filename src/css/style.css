@@ -1,6 +1,6 @@
 /* General styles */
 body {
-	background-color: #e5e7eb;
+	background-color: black; 
 	font-family: Arial, Helvetica, sans-serif;
 }
 /* jorge */
@@ -10,6 +10,66 @@ body {
 	height: 500px;
 	background-color: aquamarine;
 }
+
+/* -- Prueba Andrews --*/
+
+.animacion-arriba{
+	display: block;
+	/* background-color: black; */
+	width: 100%;
+	height: 10%;
+	margin-bottom: 1%;
+}
+
+.AnclayEspadas{
+	height: 100%;
+	width: auto;
+	animation-name: mianimacion;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+  @keyframes mianimacion {
+    0% {left: 0%; top: 0px;}
+    100%{ left: 70%; top: 0px;}
+  
+  }
+
+  .contenedor__grande{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+        /* Establecer la imagen de fondo */
+        background-image: url('../Imagenes/cartel-game.png');
+    
+        /* Ajustar el tamaño de la imagen */
+        background-size: 50% 100%; /* Opciones: 'contain', 'cover', 'auto', etc. */
+        
+        /* Repetir la imagen si es más pequeña que el contenedor */
+        background-repeat: no-repeat; /* Opciones: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat', etc. */
+        
+        /* Posición de la imagen */
+        background-position: center center; /* Puedes ajustar esto según tus preferencias */
+        /* Altura del div */
+        height: 80vh; /* Ajusta la altura según tus necesidades */
+        width: 100vw;
+  }
+
+.form__container{
+  margin-top: 10%;
+}
+
+
+
+
 
 /* -- Melany --*/
 

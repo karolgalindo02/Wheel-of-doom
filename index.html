@@ -8,35 +8,49 @@
 	<title>Wheel of Doom</title>
 	<link rel="stylesheet" href="src/css/style.css">
 	<link rel="stylesheet" href="src/css/grid.css">
-	
+
 </head>
 
 <body>
+	<header>
+		<div class="animacion-arriba">
+			<img class="AnclayEspadas" src="src/Imagenes/banner-1.png" alt="Ancla y espadas">
+		</div>
+	</header>
+	
+	<!-- Andrews-->
+	
 	<!-- jorge: create div form -->
-	<div class="form__container">
-		<form class="form__list">
-			<input type="text" name="" id="players__input" placeholder="Ingresa el nombre del jugador">
-			<button type="button" id="save">Guardar</button>
-		</form>
-	</div>
-	<!-- jorge: create players list container -->
-	<div class="container__list">
-		<h3 class="title__list"> Lista de jugadores </h3>
-		<div class="container__players">
-			<ul class="players__list">
-				
-			</ul>
+	<div class="contenedor__grande">
+		<div class="form__container">
+			<h2>Add mariner  +</h2>
+			<form class="form__list">
+				<input type="text" name="" id="players__input" placeholder="Ingresa el nombre del jugador">
+				<button type="button" id="save">Save</button>
+			</form>
+		</div>
+			<!-- jorge: create players list container -->
+		<div class="container__list">
+			<h3 class="title__list"> List of mariners </h3>
+			<div class="container__players">
+				<ul class="players__list"> <!-- Listado de jugadores-->
+				</ul>
+			</div>
+		</div>
+		<div>
+			<img src="src/Imagenes/Garfio.png" alt="Garfio">
+			<button class="buttonPlay">Play</button>
 		</div>
 	</div>
-
-	<div class="start_game_container">
-		<button type="button" id="start_game" onclick="startGame()">Jugar</button>
-	</div>
-
-	<!-- Andrews-->
-
+	
+	<footer>
+		<div class="animacion-arriba">
+			<img class="AnclayEspadas" src="src/Imagenes/banner-2.png" alt="Ancla y espadas">
+		</div>
+	</footer>
+	
 	<!-- Carlos -->
-	<script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+	</body>
 
 </html>
