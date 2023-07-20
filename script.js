@@ -10,6 +10,7 @@ const nextButton = document.getElementById('next__button')
 const overLay = document.getElementById('overlay')
 const continueButton = document.getElementById('btn__continue')
 const playerEliminated = document.getElementsByClassName('player__eliminated')[0]
+const startGameButton = document.getElementById('star_game')
 let selectPlayer;
 
 
@@ -27,9 +28,22 @@ function addPlayer(nombre, lista) {
         new_element.textContent = player;
         new_element.classList.add('list_item') // class of list 'li'
         lista.appendChild(new_element);
+        lista.appendChild(eraserButton)
         //clear input
         nombre.value = '';
-        eraserButton.addEventListener('click', erasePlayer(player, new_element))
+        eraserButton.addEventListener('click', erasePlayer(player))
+    }
+}
+
+function erasePlayer(player){
+}
+
+function startGame(){
+    if ( players.length >= 2){
+        location.href = "game.html"
+    }
+    else {
+        alert("Se necesitan almenos dos jugadores para iniciar")
     }
 }
 
@@ -71,9 +85,9 @@ function killPlayer(containerPlayer, elimatedPlayer) {
 //Event list:
 
 
-// document.getElementById("save").addEventListener('click', function () {
-//     addPlayer(playersInput, playersList)
-// });
+document.getElementById("save").addEventListener('click', function () {
+    addPlayer(playersInput, playersList)
+});
 
 nextButton.addEventListener('click', function () {
     nextPlayer(arrayP, playerContainer)
