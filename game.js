@@ -5,6 +5,7 @@ var playerContainer = document.getElementsByClassName('player__container')[0]
 const nextButton = document.getElementById('next__button')
 const overLay = document.getElementById('overlay')
 const continueButton = document.getElementById('btn__continue')
+const restartButton = document.getElementById('restart__btn')
 const playerEliminated = document.getElementsByClassName('player__eliminated')[0]
 let selectPlayer;
 
@@ -15,6 +16,8 @@ function nextPlayer(playersArray, containerPlayer) {
         const winner = playersArray[0];
         console.log('El ganador es: ', winner);
         alert('¡El ganador es: ' + winner + '!')
+        killButton.disabled
+        nextButton.disabled
     }
 
     const playerRamdom = Math.floor(Math.random() * playersArray.length); // select player ramdom in array
@@ -37,7 +40,7 @@ function killPlayer(containerPlayer, elimatedPlayer) {
 
         setTimeout(function () {
             overLay.classList.add('active');
-        }, 2000);
+        }, 1000);
         playerEliminated.textContent = elimatedPlayer + ' ha muerto'
     }
 }
@@ -56,4 +59,8 @@ killButton.addEventListener('click', function () {
 
 continueButton.addEventListener('click', function () {
     overLay.classList.remove('active')
+})
+
+restartButton.addEventListener('click', function () {
+    location.href = 'index.html'
 })
