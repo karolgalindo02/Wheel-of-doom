@@ -1,7 +1,14 @@
 /* General styles */
 body {
-	background-color:black;
+	background-color: black; 
 	font-family: Arial, Helvetica, sans-serif;
+}
+/* jorge */
+.container__list{
+	display: block;
+	width: 200px;
+	height: 500px;
+	background-color: aquamarine;
 }
 
 
