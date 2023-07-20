@@ -9,6 +9,7 @@ body {
 	width: 200px;
 	height: 500px;
 	background-color: aquamarine;
+  overflow: auto; /* Activa el scroll cuando el contenido exceda el tamaño del contenedor */
 }
 
 
