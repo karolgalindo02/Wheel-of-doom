@@ -24,6 +24,7 @@ function nextPlayer(playersArray, containerPlayer) {
 
     let newNameElement = document.createElement('h4');
     newNameElement.textContent = selectPlayer;
+    newNameElement.classList.add('name')
     containerPlayer.appendChild(newNameElement);
     console.log(playersArray)
 
