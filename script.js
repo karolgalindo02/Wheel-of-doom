@@ -38,11 +38,6 @@ function startGame(){
     }
 }
 
-
-
-
-
-
 //Event list:
 
 

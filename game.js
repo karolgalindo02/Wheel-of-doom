@@ -9,6 +9,17 @@ const restartButton = document.getElementById('restart__btn')
 const playerEliminated = document.getElementsByClassName('player__eliminated')[0]
 let selectPlayer;
 
+const imgMovement = { 
+    container : document.getElementsByClassName('example__img'), 
+    img : document.getElementById('player__image'),
+    leftPosition : 0,
+    topPosition : 0,
+}
+
+function hide(){
+    restartButton.style.display = 'none'
+    imgMovement.img.style.display = 'none'
+}
 
 function nextPlayer(playersArray, containerPlayer) {
 
@@ -18,6 +29,7 @@ function nextPlayer(playersArray, containerPlayer) {
         alert('¡El ganador es: ' + winner + '!')
         killButton.disabled
         nextButton.disabled
+        restartButton.style.display = 'flex'
     }
 
     const playerRamdom = Math.floor(Math.random() * playersArray.length); // select player ramdom in array
@@ -29,7 +41,12 @@ function nextPlayer(playersArray, containerPlayer) {
     newNameElement.textContent = selectPlayer;
     containerPlayer.appendChild(newNameElement);
     console.log(playersArray)
+}
 
+function moveImgLeft(){
+    imgMovement.img.style.display = 'flex'
+    imgMovement.leftPosition = imgMovement.leftPosition - 5;
+    imgMovement.img.style.left = imgMovement.leftPosition + "px";
 }
 
 
@@ -40,7 +57,7 @@ function killPlayer(containerPlayer, elimatedPlayer) {
 
         setTimeout(function () {
             overLay.classList.add('active');
-        }, 1000);
+        }, 2000);
         playerEliminated.textContent = elimatedPlayer + ' ha muerto'
     }
 }
@@ -51,7 +68,9 @@ function killPlayer(containerPlayer, elimatedPlayer) {
 
 nextButton.addEventListener('click', function () {
     nextPlayer(arrayP, playerContainer)
+    setInterval(moveImgLeft, 100)
 })
+
 
 killButton.addEventListener('click', function () {
     killPlayer(playerContainer, selectPlayer)
@@ -64,3 +83,5 @@ continueButton.addEventListener('click', function () {
 restartButton.addEventListener('click', function () {
     location.href = 'index.html'
 })
+
+window.addEventListener('load', hide)

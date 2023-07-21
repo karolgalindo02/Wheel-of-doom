@@ -38,3 +38,12 @@
     display: grid;
 place-content: center;
 }
+
+/* --- Juan--- */
+
+.example__img, #player__image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 10px;
+}
