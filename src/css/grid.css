@@ -1,3 +1,91 @@
 /* -- Melany --*/
 
 /* --- JJulian --- */
+
+/* Mobile */
+@media (max-width: 575px) {
+    .container-game{
+        position: relative;
+    }
+
+.play{
+    display: none;
+}
+/* Logo */
+.logo img{
+    align-items: center; 
+    justify-content: center;
+    margin-left: 35%;
+}
+.title__list{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+    text-align: center;
+}
+    
+    .aviso img{
+        max-width: 50%;
+        max-height: 50%;
+        margin: 0;
+        position: relative;
+        left: 60%;
+        bottom: 40px;
+    }
+    .player__container{
+        background-size: 45%;
+        width: 374px;
+        height: 300px;
+        left: 36%;
+        bottom: 35%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-image: url(/src/img/nube\ 1.png);
+        place-content: center;
+        position: absolute;
+        text-align: center;
+    }
+    .content-modal{
+        width: 90%;
+    }
+    video{
+        width: 100%;
+        height: 50%;
+    }
+    
+    .capa{
+        width: 100%;
+        height: 50%;
+    }
+    .kill__button__container{
+        bottom: 37%;
+        left: 70%;
+      
+    }
+    .kill__button{
+        font-size: 20px;
+            padding: 10px 20px;
+            background-image: url("/src/icons/boton-play-negro.png");
+    }
+    .next__button__container{
+        left: 3%;
+        bottom: 37%;
+    }   
+    .next__button{
+        font-size: 20px;
+            padding: 10px 20px;
+            background-image: url("/src/icons/boton-play-negro.png");
+    }
+}
+@media screen and (max-width:800px) {
+
+}
+
+/* Tablet */
+@media (min-width: 576px) and (max-width: 767px) {}
+
+/* Desktop */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Modo horizontal */
+@media (min-width: 992px) and (orientation: landscape) {}

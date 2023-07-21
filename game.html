@@ -5,15 +5,48 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Wheel of Doom</title>
-	<link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/game.css">
-    <link rel="stylesheet" href="src/css/grid.css">
+	<link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/game.css">
+    <link rel="stylesheet" href="./src/css/grid.css">
+	<link rel="stylesheet" href="./src/css/game.scss">
 </head>
 <body>
 <!-- Andrews -->
+<!-- Carlos -->
 
-<!-- Carlos-->
+<!-- Karol -->
+<main id="hero">
+	<audio src="./src/music/Barco Pirata.mp3" autoplay loop></audio>
+	
+<!--Header-->
+<div class="logo-game">
+		<div class="logo"><img src="/src/icons/logo-negro.png"></div>
+	<h3 class="title__list"> Wheel of Pirates </h3>
+</div>
 
-	<script src="script.js"></script>
+<!--Ventana Game-->
+<label for="btn-play" class="play">Play</label>
+<input id="btn-play" type="checkbox">
+
+
+<div class="container-game">
+	<video muted autoplay loop>
+		<source src="./src/motion/pirate-background.mp4" type="video/mp4">
+	</video>
+	<div class="capa"></div>
+
+	<div class="player__container"></div>
+	<div class="aviso"><img src="/src/motion/loro.gif"></div>
+	<audio src="" class="audio-player"></audio>
+	<div class="kill__button__container">
+		<button id="kill__button" class="kill__button"> KILL </button>
+	</div>
+	<div class="next__button__container">
+		<button id="next__button" class="next__button"> NEXT </button>
+	</div>
+</div>
+</main>
+<!--Fin de Ventana Game-->
+	<script src="/src/script.js"></script>
 </body>
 </html>

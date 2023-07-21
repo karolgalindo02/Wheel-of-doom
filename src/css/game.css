@@ -1,3 +1,183 @@
 /* -- Melany --*/
 
 /* --- JJulian --- */
+
+/* --- Karol --- */
+/* Logo */
+.logo img{
+    align-items: center; 
+    justify-content: center;
+    margin-left: 35%;
+}
+.title__list{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+    text-align: center;
+}
+
+/* Estilo fondo */
+#hero {
+    min-height: 100vh;
+    position: relative;
+    scroll-behavior: none;
+    overflow-y: hidden;
+  }
+
+.logo-game{
+    padding: 40px;
+    background-image: url("/src/img/imagen\ 6.png");
+}
+
+.container-game{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-image: url("/src/img/imagen\ 6.png");
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.aviso img{
+    max-width: 60%;
+    max-height: 60%;
+    left: 100%;
+    bottom: 70px;
+    position: relative;
+    cursor: pointer;
+}
+
+.container-game label{
+    position: relative;
+top: 8%;
+    padding: 45px 75px;
+    background-repeat: no-repeat;
+    background-image: url("/src/icons/boton-play-negro.png");
+    cursor: pointer;
+}
+
+#btn-play:checked ~ .container-game{
+    display: flex;
+}
+#btn-play:checked{
+    display: none;
+}
+
+/* Fondo animado */
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow-y: hidden;
+}
+
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    overflow-y: hidden;
+}
+
+/* Estilos jugadores */
+.player__container{
+    background-size: 55%;
+    width: 374px;
+    height: 300px;
+    left: 54%;
+    bottom: 37%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-image: url(/src/img/nube\ 1.png);
+    place-content: center;
+    position: absolute;
+    text-align: left;
+  
+    
+}
+.kill__button__container{
+    margin-bottom: 50px;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-content: center;
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+.pupup__container{
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: repeat(2, 1rf);
+}
+.pupup, .imagen__container{
+    display: grid;
+place-content: center;
+}
+.kill__button__container{
+    position: absolute;
+    left: 85%;
+    bottom: 10px;
+    margin: 0;
+}
+.kill__button{
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+    font-family: 'Lugrasimo';
+    text-align:start;
+    position: relative;
+    padding: 25px 25px;
+    background-repeat: no-repeat;
+    background-image: url("/src/img/Boton.png");
+    cursor: pointer;
+    background-size: 50%;
+    width: 200px;
+    height: 70px;
+    flex-shrink: 0;
+}
+.next__button__container{
+    position: absolute;
+    right: 73%;
+    bottom: 10px;
+    margin: 0;
+}
+.next__button{
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+    font-family: 'Lugrasimo';
+    text-align:start;
+    position: relative;
+    padding: 25px 25px;
+    background-repeat: no-repeat;
+    background-image: url("/src/img/Boton.png");
+    cursor: pointer;
+    background-size: 50%;
+    width: 200px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+
+
