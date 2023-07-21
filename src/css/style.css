@@ -7,9 +7,6 @@ body {
 	margin: 0;
 }
 
-<<<<<<< Updated upstream
-/* -- Melany --*/
-=======
 .animacion-arriba{
 	position: absolute;
 	background-image: url('../Imagenes/banner-1.png');
@@ -149,7 +146,6 @@ main {
 	background-size: 140px 65px;
   }
   
->>>>>>> Stashed changes
 
 .buttonPlay:hover{
 	opacity: 0.8;
