@@ -12,6 +12,10 @@ body {
   overflow: auto; /* Activa el scroll cuando el contenido exceda el tamaño del contenedor */
 }
 
+audio {
+  color: white
+}
+
 
 /* -- Prueba Andrews --*/
 
