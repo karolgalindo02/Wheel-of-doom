@@ -15,10 +15,12 @@ const imgMovement = {
     leftPosition : 0,
     topPosition : 0,
 }
+const shark = document.getElementById('shark__gif')
 
 function hide(){
     restartButton.style.display = 'none'
     imgMovement.img.style.display = 'none'
+    shark.style.display = 'none'
 }
 
 function nextPlayer(playersArray, containerPlayer) {
@@ -43,13 +45,6 @@ function nextPlayer(playersArray, containerPlayer) {
     console.log(playersArray)
 }
 
-function moveImgLeft(){
-    imgMovement.img.style.display = 'flex'
-    imgMovement.leftPosition = imgMovement.leftPosition - 5;
-    imgMovement.img.style.left = imgMovement.leftPosition + "px";
-}
-
-
 function killPlayer(containerPlayer, elimatedPlayer) {
     while (containerPlayer.firstChild) {
         containerPlayer.removeChild(containerPlayer.firstChild);
@@ -62,18 +57,37 @@ function killPlayer(containerPlayer, elimatedPlayer) {
     }
 }
 
-
 //Event list:
 
 
 nextButton.addEventListener('click', function () {
     nextPlayer(arrayP, playerContainer)
-    setInterval(moveImgLeft, 100)
-})
+    let interval = setInterval(moveImgLeft, 10)
 
+    function moveImgLeft(){
+        imgMovement.img.style.display = 'flex'
+        imgMovement.leftPosition = imgMovement.leftPosition - 1;
+        imgMovement.img.style.left = imgMovement.leftPosition + "px";
+    
+        if ( imgMovement.leftPosition === -240 ) {
+            clearInterval(interval)
+        }
+    }
+})
 
 killButton.addEventListener('click', function () {
     killPlayer(playerContainer, selectPlayer)
+    let interval = setInterval(moveImgDown, 10)
+
+    function moveImgDown(){
+        shark.style.display = 'flex'
+        imgMovement.topPosition = imgMovement.topPosition + 5;
+        imgMovement.img.style.top = imgMovement.topPosition + "px";
+
+        if ( imgMovement.topPosition === 250 ) {
+            clearInterval(interval)
+        }
+    }
 })
 
 continueButton.addEventListener('click', function () {

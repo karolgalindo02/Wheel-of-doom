@@ -36,7 +36,7 @@
 }
 .pupup, .imagen__container{
     display: grid;
-place-content: center;
+    place-content: center;
 }
 
 /* --- Juan--- */
@@ -45,5 +45,13 @@ place-content: center;
     position: relative;
     display: flex;
     justify-content: center;
-    left: 10px;
+    left: 380px;
+}
+
+.container__shark, #shark__gif{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 50px;
+    top: 80px;
 }
