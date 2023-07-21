@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Wheel of Doom</title>
-	<link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/game.css">
-    <link rel="stylesheet" href="src/css/grid.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del pirata</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-image: url('/imagenes/fondo\ header.webp');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 36px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        section {
+            background-image: url('/imagenes/paisaje\ del\ mar.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        footer {
+            background-image: url('/imagenes/fondo\ header.webp');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    
 </head>
 <body>
-<!-- Andrews -->
+    <header>WHEEL OF PIRATES
+        <img class="header-logo" src="/imagenes/logo piratas.png" height="200px">
+    </header>
+    <section>
+        <div class="Personajes">
+            <img src="/imagenes/pirata.jpg">
+            <img src="/imagenes/tentaculo1.jpg">
+            <img src="/imagenes/tentaculo2.jpg">
+            <img src="/imagenes/barco.jpg">
+        </div>
+    </section>
 
-<!-- Carlos-->
-
-	<script src="script.js"></script>
 </body>
+<footer>
+    <button>NEXT</button>
+    <button>KILL</button>
+</footer>
 </html>
+
