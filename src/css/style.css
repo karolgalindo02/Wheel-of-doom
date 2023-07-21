@@ -1,9 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
 /* General styles */
 body {
-	background-color: #e5e7eb;
-	font-family: Arial, Helvetica, sans-serif;
+	background-color: #000000;
+	font-family: 'Lugrasimo', Helvetica, sans-serif;
+	margin: 0;
 }
 
+<<<<<<< Updated upstream
 /* -- Melany --*/
+=======
+.animacion-arriba{
+	position: absolute;
+	background-image: url('../Imagenes/banner-1.png');
+	width: 100%;
+	height: 45px;
+	top: 0;
+	overflow-x: hidden;
+	background-repeat: repeat-x;
+	background-position: left top;
+}
 
-/* --- JJulian --- */
+.content-cabecera{
+	position: absolute;
+	width: 100%;
+	margin-top: 80px;
+	text-align: center;
+}
+
+.content-logo{
+	margin: 0;
+	padding: 0;
+}
+
+.content-logo img{
+	width: 80px;
+}
+  
+.content-cabecera h2{
+	color: white;
+	margin: -5px;
+	padding: 0;
+}
+
+main {
+	position: absolute;
+	background-image: url('../Imagenes/cartel-game.png');
+	margin: auto;
+	margin-top: 170px;
+	width: 100%; /* Ajusta el ancho del contenedor según el tamaño de tu imagen */
+	height: 600px; /* Ajusta la altura del contenedor según el tamaño de tu imagen */
+	background-size: contain; /* Cambia a 'contain' para que la imagen se ajuste al contenedor */
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: -1;
+}
+  
+.content1 {
+	position: relative;
+	height: 70vh;
+	width: 70vw;
+	display: flex; /* Agrega el display:flex para utilizar justify-content y align-items */
+	justify-content: center;
+	align-items: center;
+}
+  
+.form__container {
+	position: relative;
+	background-image: url(../Imagenes/tablon-1.png);
+	text-align: center;
+	width: 142px;
+	padding: 4px;
+	background-repeat: no-repeat;
+	left: 45%;
+	top: 5%; /* Ajusta esta propiedad para centrar verticalmente el form__container */
+	transform: translate(-50%, -50%);
+	background-size: contain;
+}
+  
+#players__input {
+	width: 100px;
+}
+  
+.container__list {
+	position: absolute;
+	background-image: url(../Imagenes/tablon-2.png);
+	text-align: center;
+	width: 150px;
+	height: 165px;
+	background-repeat: no-repeat;
+	left: 69%;
+	top: 69%; /* Ajusta esta propiedad para centrar verticalmente el container__list */
+	transform: translate(-50%, -50%);
+	background-size: contain;
+}
+  
+.container__list h4 {
+	color: white;
+	font-family: 'Helvetica';
+	margin: 0;
+	margin-top: 5px;
+}
+  
+.container__players {
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 5px;
+	padding: 2px 2px;
+}
+  
+  /* Estilos para la lista de jugadores */
+.players__list {
+	list-style: none;
+	height: 70px;
+	margin: 0;
+}
+
+.players__list ul{
+	justify-content: center;
+}
+
+.content2 {
+	position: absolute;
+	bottom: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .content2 img {
+	height: 70px;
+  }
+  
+  .buttonPlay {
+	margin-left: 10px;
+	padding: 10px 18px;
+	background-color: transparent;
+	font-family: 'Lugrasimo';
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	font-size: 30px;
+	background-image: url('../Imagenes/boton-play-blanco.png');
+	background-repeat: no-repeat;
+	background-size: 140px 65px;
+  }
+  
+>>>>>>> Stashed changes
+
+.buttonPlay:hover{
+	opacity: 0.8;
+}
+
+.animacion-abajo{
+	position: absolute;
+	background-image: url('../Imagenes/banner-2.png');
+    width: 100%;
+	height: 45px;
+	bottom: 0;
+	overflow-x: hidden;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
