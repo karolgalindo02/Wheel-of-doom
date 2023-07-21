@@ -1,94 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
 /* General styles */
 body {
-	background-color: black;
-	font-family: Arial, Helvetica, sans-serif;
+	background-color: #000000;
+	font-family: 'Lugrasimo', Helvetica, sans-serif;
+	margin: 0;
 }
 
-/* jorge */
-.container__list {
-	display: block;
-	width: 200px;
-	height: 500px;
-	background-color: aquamarine;
-	overflow: auto;
-	/* Activa el scroll cuando el contenido exceda el tamaño del contenedor */
-}
-
-audio {
-	color: white
-}
-
-
-/* -- Prueba Andrews --*/
-
-.animacion-arriba {
-	display: block;
+.animacion-arriba{
+	background-image: url('../Imagenes/banner-1.png');
 	width: 100%;
-	height: 10%;
-	margin-bottom: 1%;
+	height: 45px;
+	top: 0;
+	overflow-x: hidden;
+	background-repeat: repeat-x;
+	background-position: left top;
 }
 
-.AnclayEspadas {
-	height: 100%;
-	width: auto;
-	animation-name: mianimacion;
-	animation-duration: 1s;
-	animation-delay: 1s;
+.content-cabecera{
+	position: absolute;
+	width: 100%;
+	margin-top: 80px;
+	text-align: center;
+}
+
+.content-logo{
+	margin: 0;
+	padding: 0;
+}
+
+.content-logo img{
+	width: 80px;
+}
+
+.content-cabecera h2{
+	color: white;
+	margin: -5px;
+	padding: 0;
+}
+
+main {
+	position: absolute;
+	background-image: url('../Imagenes/cartel-game.png');
+	margin: auto;
+	margin-top: 170px;
+	width: 100%; /* Ajusta el ancho del contenedor según el tamaño de tu imagen */
+	height: 600px; /* Ajusta la altura del contenedor según el tamaño de tu imagen */
+	background-size: contain; /* Cambia a 'contain' para que la imagen se ajuste al contenedor */
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: -1;
+}
+
+.content1 {
 	position: relative;
-	animation-direction: normal;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+	height: 70vh;
+	width: 70vw;
+	display: flex; /* Agrega el display:flex para utilizar justify-content y align-items */
+	justify-content: center;
+	align-items: center;
+}
+  
+.form__container {
+	position: relative;
+	background-image: url(../Imagenes/tablon-1.png);
+	text-align: center;
+	width: 142px;
+	padding: 4px;
+	background-repeat: no-repeat;
+	left: 45%;
+	top: 5%; /* Ajusta esta propiedad para centrar verticalmente el form__container */
+	transform: translate(-50%, -50%);
+	background-size: contain;
+}
+  
+#players__input {
+	width: 100px;
+}
+  
+.container__list {
+	position: absolute;
+	background-image: url(../Imagenes/tablon-2.png);
+	text-align: center;
+	width: 150px;
+	height: 165px;
+	background-repeat: no-repeat;
+	left: 69%;
+	top: 69%; /* Ajusta esta propiedad para centrar verticalmente el container__list */
+	transform: translate(-50%, -50%);
+	background-size: contain;
+}
+  
+.container__list h4 {
+	color: white;
+	font-family: 'Helvetica';
+	margin: 0;
+	margin-top: 5px;
+}
+  
+.container__players {
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 5px;
+	padding: 2px 2px;
+}
+  
+  /* Estilos para la lista de jugadores */
+.players__list {
+	list-style: none;
+	height: 70px;
+	margin: 0;
 }
 
-
-
-@keyframes mianimacion {
-	0% {
-		left: 0%;
-		top: 0px;
-	}
-
-	100% {
-		left: 70%;
-		top: 0px;
-	}
-
+.players__list ul{
+	justify-content: center;
 }
 
-.contenedor__grande {
+.content2 {
+	position: absolute;
+	bottom: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
 	align-items: center;
-	margin: auto;
-	/* Establecer la imagen de fondo */
-	background-image: url('../Imagenes/cartel-game.png');
-
-	/* Ajustar el tamaño de la imagen */
-	background-size: 50% 100%;
-	/* Opciones: 'contain', 'cover', 'auto', etc. */
-
-	/* Repetir la imagen si es más pequeña que el contenedor */
+  }
+  
+  .content2 img {
+	height: 70px;
+  }
+  
+  .buttonPlay {
+	margin-left: 10px;
+	padding: 10px 18px;
+	background-color: transparent;
+	font-family: 'Lugrasimo';
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	font-size: 30px;
+	background-image: url('../Imagenes/boton-play-blanco.png');
 	background-repeat: no-repeat;
-	/* Opciones: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat', etc. */
+	background-size: 140px 65px;
+  }
+  
 
-	/* Posición de la imagen */
-	background-position: center center;
-	/* Puedes ajustar esto según tus preferencias */
-	/* Altura del div */
-	height: 80vh;
-	/* Ajusta la altura según tus necesidades */
-	width: 100vw;
+.buttonPlay:hover{
+	opacity: 0.8;
 }
 
-.form__container {
-	margin-top: 10%;
+.animacion-abajo{
+	position: absolute;
+	background-image: url('../Imagenes/banner-2.png');
+    width: 100%;
+	height: 45px;
+	bottom: 0;
+	overflow-x: hidden;
+	background-repeat: repeat-x;
+	background-position: left bottom;
 }
-
-
-
-
-
-/* -- Melany --*/
-
-/* --- JJulian --- */
