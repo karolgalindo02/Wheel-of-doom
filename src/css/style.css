@@ -4,7 +4,6 @@
 body {
 	background-color: #000000;
 	font-family: 'Lugrasimo', Helvetica, sans-serif;
-	margin: 0;
 }
 
 .animacion-arriba{
@@ -160,3 +159,16 @@ main {
 	background-repeat: repeat-x;
 	background-position: left bottom;
 }
+
+
+/* Mobile */
+@media (max-width: 575px) {}
+
+/* Tablet */
+@media (min-width: 576px) and (max-width: 767px) {}
+
+/* Desktop */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Modo horizontal */
+@media (min-width: 992px) and (orientation: landscape) {}
