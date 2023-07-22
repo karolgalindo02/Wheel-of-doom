@@ -4,82 +4,72 @@ body {
 	font-family: 'Lugrasimo', Helvetica, sans-serif;
 	margin: 0;
 }
-
 /* jorge */
-.container__list {
+.container__list{
 	display: block;
 	width: 200px;
 	height: 500px;
-	overflow: auto;
-	/* Activa el scroll cuando el contenido exceda el tamaño del contenedor */
+  overflow: auto; /* Activa el scroll cuando el contenido exceda el tamaño del contenedor */
+}
+
+audio {
+	color: white
 }
 
 
 /* -- Prueba Andrews --*/
 
-.animacion-arriba {
+.animacion-arriba{
 	display: block;
 	width: 100%;
 	height: 10%;
 	margin-bottom: 1%;
 }
 
-.AnclayEspadas {
+.AnclayEspadas{
 	height: 100%;
 	width: auto;
 	animation-name: mianimacion;
-	animation-duration: 1s;
-	animation-delay: 1s;
-	position: relative;
-	animation-direction: normal;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 
 
-@keyframes mianimacion {
-	0% {
-		left: 0%;
-		top: 0px;
-	}
+  @keyframes mianimacion {
+    0% {left: 0%; top: 0px;}
+    100%{ left: 70%; top: 0px;}
+  
+  }
 
-	100% {
-		left: 70%;
-		top: 0px;
-	}
+  .contenedor__grande{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+        /* Establecer la imagen de fondo */
+        background-image: url('../Imagenes/cartel-game.png');
+    
+        /* Ajustar el tamaño de la imagen */
+        background-size: 50% 100%; /* Opciones: 'contain', 'cover', 'auto', etc. */
+        
+        /* Repetir la imagen si es más pequeña que el contenedor */
+        background-repeat: no-repeat; /* Opciones: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat', etc. */
+        
+        /* Posición de la imagen */
+        background-position: center center; /* Puedes ajustar esto según tus preferencias */
+        /* Altura del div */
+        height: 80vh; /* Ajusta la altura según tus necesidades */
+        width: 100vw;
+  }
 
-}
-
-.contenedor__grande {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	margin: auto;
-	/* Establecer la imagen de fondo */
-	background-image: url('../Imagenes/cartel-game.png');
-
-	/* Ajustar el tamaño de la imagen */
-	background-size: 50% 100%;
-	/* Opciones: 'contain', 'cover', 'auto', etc. */
-
-	/* Repetir la imagen si es más pequeña que el contenedor */
-	background-repeat: no-repeat;
-	/* Opciones: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat', etc. */
-
-	/* Posición de la imagen */
-	background-position: center center;
-	/* Puedes ajustar esto según tus preferencias */
-	/* Altura del div */
-	height: 80vh;
-	/* Ajusta la altura según tus necesidades */
-	width: 100vw;
-}
-
-<<<<<<< HEAD
-.form__container {
-	margin-top: 10%;
+.form__container{
+  margin-top: 10%;
 }
 
 
@@ -97,7 +87,6 @@ body {
 /* -- Melany --*/
 
 /* --- JJulian --- */
-=======
 .animacion-abajo{
 	position: absolute;
 	background-image: url('../Imagenes/banner-2.png');
@@ -108,4 +97,3 @@ body {
 	background-repeat: repeat-x;
 	background-position: left bottom;
 }
->>>>>>> parent of f75af00 (ultioms cambios despues del merge)
