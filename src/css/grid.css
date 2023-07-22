@@ -76,6 +76,27 @@
             padding: 10px 20px;
             background-image: url("/src/icons/boton-play-negro.png");
     }
+
+    .btn__continue{
+        font-size: 15px;
+            padding: 10px 50px;
+    }
+
+    .name{
+        padding: 70px 60px;
+        margin: 0;
+        text-align: start;
+       
+    }
+    .overlay{
+        position: fixed;
+        top: 20%;
+        right: 0;
+        display: grid;
+        background-size: 100%;
+        place-content: center;
+        visibility: hidden;
+    }
 }
 @media screen and (max-width:800px) {
 

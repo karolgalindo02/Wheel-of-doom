@@ -1,4 +1,8 @@
 console.log("JavaScript is ready to run");
+
+var elementToChange = document.getElementsByTagName("body")[0];
+elementToChange.style.cursor = "url('/src/icons/garfio.cur'), auto";
+
 /* --- Jorge --- */
 var playersInput = document.getElementById('players__input');
 var playersList = document.getElementsByClassName('players__list')[0];
@@ -47,6 +51,7 @@ function nextPlayer(playersArray, containerPlayer) {
 
     let newNameElement = document.createElement('h4');
     newNameElement.textContent = selectPlayer;
+    newNameElement.classList.add('name')
     containerPlayer.appendChild(newNameElement);
     console.log(playersArray)
 
@@ -65,9 +70,7 @@ function killPlayer(containerPlayer, elimatedPlayer) {
     }
 }
 
-
 //Event list:
-
 
 // document.getElementById("save").addEventListener('click', function () {
 //     addPlayer(playersInput, playersList)
