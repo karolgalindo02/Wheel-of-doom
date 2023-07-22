@@ -1,7 +1,8 @@
 /* General styles */
 body {
-	background-color: black;
-	font-family: Arial, Helvetica, sans-serif;
+	background-color: #000000;
+	font-family: 'Lugrasimo', Helvetica, sans-serif;
+	margin: 0;
 }
 
 /* jorge */
@@ -76,6 +77,7 @@ body {
 	width: 100vw;
 }
 
+<<<<<<< HEAD
 .form__container {
 	margin-top: 10%;
 }
@@ -95,3 +97,15 @@ body {
 /* -- Melany --*/
 
 /* --- JJulian --- */
+=======
+.animacion-abajo{
+	position: absolute;
+	background-image: url('../Imagenes/banner-2.png');
+    width: 100%;
+	height: 45px;
+	bottom: 0;
+	overflow-x: hidden;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+>>>>>>> parent of f75af00 (ultioms cambios despues del merge)
