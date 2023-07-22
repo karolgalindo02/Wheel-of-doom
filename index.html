@@ -7,34 +7,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Wheel of Doom</title>
 	<link rel="stylesheet" href="src/css/style.css">
-	<link rel="stylesheet" href="src/css/grid.css">
-
+    <link rel="stylesheet" href="src/css/grid.css">
 </head>
 
+
 <body>
-	<audio autoplay>
-		<source src="src/Sonidos/WheelofPirates.mp3" type="audio/mpeg">
-	</audio>
+<audio autoplay>
+	<source src="src/Sonidos/WheelofPirates.mp3" type="audio/mpeg">
+</audio>
+<!-- JJulian-->
+
 <header>
-		<div class="animacion-arriba">
-			<img class="AnclayEspadas" src="src/Imagenes/banner-1.png" alt="Ancla y espadas">
-		</div>
-	</header>
-	
-	<!-- Andrews-->
-	
-	<!-- jorge: create div form -->
-	<div class="contenedor__grande">
+	<div class="animacion-arriba">
+		<img class="AnclayEspadas">
+	</div>
+</header>
+
+<div class="content-cabecera">
+	<div class="content-logo">
+		<img src="src/Imagenes/logo-blanco.png">
+		<h2>Wheel Of Pirates</h2>
+	</div>
+</div>
+<main>
+<!-- jorge: create div form -->
+	<div class="content1">
 		<div class="form__container">
-			<h2>Add mariner  +</h2>
 			<form class="form__list">
-				<input type="text" name="" id="players__input" placeholder="Ingresa el nombre del jugador">
-				<button type="button" id="save">Save</button>
+				<input type="text" name="" id="players__input" placeholder="Add mariner">
+				<button type="button" id="save">+</button>
 			</form>
 		</div>
-			<!-- jorge: create players list container -->
+			<!-- jorge: create Splayers list container -->
 		<div class="container__list">
-			<h3 class="title__list"> List of mariners </h3>
+			<h4 class="title__list"> List of mariners </h4>
 			<div class="container__players">
 				<ul class="players__list"> <!-- Listado de jugadores-->
 				</ul>
@@ -45,15 +51,18 @@
 			<button class="buttonPlay">Play</button>
 		</div>
 	</div>
-	
-	<footer>
-		<div class="animacion-arriba">
-			<img class="AnclayEspadas" src="src/Imagenes/banner-2.png" alt="Ancla y espadas">
-		</div>
-	</footer>
-	
-	<!-- Carlos -->
-		<script src="script.js"></script>
-	</body>
+</main>
+<div class="content2">
+	<img src="src/Imagenes/Garfio.png" alt="Garfio">
+	<button class="buttonPlay">PLAY</button>
+</div>
+<footer>
+	<div class="animacion-abajo">
+		<img class="AnclayEspadas">
+	</div>
+</footer>
 
+<!-- Carlos -->
+	<script src="script.js"></script>
+</body>
 </html>

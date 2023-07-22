@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
 /* General styles */
 body {
 	background-color: #000000;
@@ -10,6 +12,15 @@ body {
 	width: 200px;
 	height: 500px;
   overflow: auto; /* Activa el scroll cuando el contenido exceda el tamaño del contenedor */
+
+.animacion-arriba{
+	background-image: url('../Imagenes/banner-1.png');
+	width: 100%;
+	height: 45px;
+	top: 0;
+	overflow-x: hidden;
+	background-repeat: repeat-x;
+	background-position: left top;
 }
 
 audio {
@@ -22,8 +33,36 @@ audio {
 .animacion-arriba{
 	display: block;
 	width: 100%;
-	height: 10%;
-	margin-bottom: 1%;
+	margin-top: 80px;
+	text-align: center;
+}
+
+.content-logo{
+	margin: 0;
+	padding: 0;
+}
+
+.content-logo img{
+	width: 80px;
+}
+
+.content-cabecera h2{
+	color: white;
+	margin: -5px;
+	padding: 0;
+}
+
+main {
+	position: absolute;
+	background-image: url('../Imagenes/cartel-game.png');
+	margin: auto;
+	margin-top: 170px;
+	width: 100%; /* Ajusta el ancho del contenedor según el tamaño de tu imagen */
+	height: 600px; /* Ajusta la altura del contenedor según el tamaño de tu imagen */
+	background-size: contain; /* Cambia a 'contain' para que la imagen se ajuste al contenedor */
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: -1;
 }
 
 .AnclayEspadas{
@@ -73,6 +112,11 @@ audio {
 }
 
 
+/* Mobile */
+@media (max-width: 575px) {}
+
+/* Tablet */
+@media (min-width: 576px) and (max-width: 767px) {}
 .container_imagen_play{
 	display: flex;
 	gap: 10%;
@@ -83,6 +127,8 @@ audio {
 }
 
 
+/* Desktop */
+@media (min-width: 768px) and (max-width: 991px) {}
 
 /* -- Melany --*/
 
