@@ -12,6 +12,7 @@ body {
 	width: 200px;
 	height: 500px;
   overflow: auto; /* Activa el scroll cuando el contenido exceda el tamaño del contenedor */
+}
 
 .animacion-arriba{
 	background-image: url('../Imagenes/banner-1.png');
@@ -85,30 +86,30 @@ main {
   
   }
 
-  .contenedor__grande{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      margin: auto;
-        /* Establecer la imagen de fondo */
-        background-image: url('../Imagenes/cartel-game.png');
-    
-        /* Ajustar el tamaño de la imagen */
-        background-size: 50% 100%; /* Opciones: 'contain', 'cover', 'auto', etc. */
-        
-        /* Repetir la imagen si es más pequeña que el contenedor */
-        background-repeat: no-repeat; /* Opciones: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat', etc. */
-        
-        /* Posición de la imagen */
-        background-position: center center; /* Puedes ajustar esto según tus preferencias */
-        /* Altura del div */
-        height: 80vh; /* Ajusta la altura según tus necesidades */
-        width: 100vw;
-  }
+.contenedor__grande{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	/* Establecer la imagen de fondo */
+	background-image: url('../Imagenes/cartel-game.png');
+
+	/* Ajustar el tamaño de la imagen */
+	background-size: 50% 100%; /* Opciones: 'contain', 'cover', 'auto', etc. */
+	
+	/* Repetir la imagen si es más pequeña que el contenedor */
+	background-repeat: no-repeat; /* Opciones: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat', etc. */
+	
+	/* Posición de la imagen */
+	background-position: center center; /* Puedes ajustar esto según tus preferencias */
+	/* Altura del div */
+	height: 80vh; /* Ajusta la altura según tus necesidades */
+	width: 100vw;
+}
 
 .form__container{
-  margin-top: 10%;
+margin-top: 10%;
 }
 
 
@@ -117,14 +118,7 @@ main {
 
 /* Tablet */
 @media (min-width: 576px) and (max-width: 767px) {}
-.container_imagen_play{
-	display: flex;
-	gap: 10%;
-}
- 
-.container_imagen_play button{
-	
-}
+
 
 
 /* Desktop */
