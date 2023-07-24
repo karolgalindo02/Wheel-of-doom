@@ -15,12 +15,22 @@ const imgMovement = {
     leftPosition : 0,
     topPosition : 0,
 }
+const initialValues = {
+    initialLeft : imgMovement.leftPosition = 0,
+    initialTop : imgMovement.topPosition = 0,
+}
+
 const shark = document.getElementById('shark__gif')
 
 function hide(){
-    restartButton.style.display = 'none'
-    imgMovement.img.style.display = 'none'
-    shark.style.display = 'none'
+    restartButton.style.display = 'none';
+    imgMovement.img.style.display = 'none';
+    shark.style.display = 'none';
+
+    imgMovement.leftPosition = initialValues.initialLeft;
+    imgMovement.topPosition = initialValues.initialTop;
+
+    console.log(imgMovement)
 }
 
 function nextPlayer(playersArray, containerPlayer) {
@@ -92,6 +102,7 @@ killButton.addEventListener('click', function () {
 
 continueButton.addEventListener('click', function () {
     overLay.classList.remove('active')
+    hide()
 })
 
 restartButton.addEventListener('click', function () {
