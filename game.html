@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/icons/icon.png" type="image/x-icon">
 	<title>Wheel of Doom</title>
 	<link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/game.css">
@@ -11,13 +12,10 @@
 	<link rel="stylesheet" href="./src/css/game.scss">
 </head>
 <body>
-<!-- Andrews -->
-<!-- Carlos -->
 
 <!-- Karol -->
 <main id="hero">
 	<audio src="./src/music/Barco Pirata.mp3" autoplay loop></audio>
-	
 <!--Header-->
 <div class="logo-game">
 		<div class="logo"><img src="/src/icons/logo-negro.png"></div>
@@ -28,16 +26,26 @@
 <label for="btn-play" class="play">Play</label>
 <input id="btn-play" type="checkbox">
 
-
 <div class="container-game">
+
 	<video muted autoplay loop>
 		<source src="./src/motion/pirate-background.mp4" type="video/mp4">
 	</video>
 	<div class="capa"></div>
-
+	<div class="audio__control">
+		<button onclick="togglePlay()"><img src="src/icons/volumen.png" id="image" onclick="changeFunctionality()"></button>
+		  <input type="range" value="10" min="0" max="99" oninput="setVolume()" id="r" class="volumen">
+		</div>
+		<div class="example__img" >
+			<img src="/src/img/pirata.png" alt="" id="player__image" >
+		</div>
+	<div class="container__shark">
+			<img src="/src/motion/sharks.gif" alt="" id="shark__gif"></img>
+		</div> 
 	<div class="player__container"></div>
 	<div class="aviso"><img src="/src/motion/loro.gif"></div>
 	<audio src="" class="audio-player"></audio>
+	
 	<div class="kill__button__container">
 		<button id="kill__button" class="kill__button"> KILL </button>
 	</div>
@@ -50,7 +58,7 @@
 				<h3 class="player__eliminated"></h3>
 				<div class="btn__alert">
 					<button id="btn__continue" class="btn__continue"> CONTINUAR </button>
-					<button id="restart__btn" class="restart__btn"></button>
+					<button id="restart__btn" class="restart__btn"> RESET </button>
 				</div>
 			</div>
 		</div>

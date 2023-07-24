@@ -3,11 +3,16 @@
 /* --- JJulian --- */
 
 /* --- Karol --- */
+.play {
+    text-align: center;
+    font-size: 30px;
+}
+
 /* Logo */
 .logo img{
     align-items: center; 
     justify-content: center;
-    margin-left: 35%;
+    margin-left: 45%;
 }
 .title__list{
 	font-style: normal;
@@ -43,7 +48,6 @@
 .aviso img{
     max-width: 60%;
     max-height: 60%;
-    left: 100%;
     bottom: 70px;
     position: relative;
     cursor: pointer;
@@ -93,7 +97,7 @@ video{
     background-size: 55%;
     width: 374px;
     height: 300px;
-    left: 54%;
+    left: 63%;
     bottom: 37%;
     margin: 0;
     background-repeat: no-repeat;
@@ -129,7 +133,7 @@ text-align: center;
 
 .restart__btn{
     display: none;
-    visibility: hidden;
+    position: relative;
 }
 
 .overlay.active{
@@ -151,46 +155,48 @@ text-align: center;
 
 .kill__button__container{
     position: absolute;
-    left: 85%;
-    bottom: 10px;
+    left: 75%;
+    bottom: 20px;
     margin: 0;
 }
 .kill__button{
     border: none;
     background-color: inherit;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Lugrasimo';
-    text-align:start;
+    text-align: center;
     position: relative;
     padding: 25px 25px;
     background-repeat: no-repeat;
     background-image: url("/src/img/Boton.png");
+    background-position: center;
     cursor: pointer;
     background-size: 50%;
-    width: 200px;
-    height: 70px;
+    width: 300px;
+    height: 100px;
     flex-shrink: 0;
 }
 .next__button__container{
     position: absolute;
     right: 73%;
-    bottom: 10px;
+    bottom: 20px;
     margin: 0;
 }
 .next__button{
     border: none;
     background-color: inherit;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Lugrasimo';
-    text-align:start;
+    text-align: center;
     position: relative;
     padding: 25px 25px;
     background-repeat: no-repeat;
     background-image: url("/src/img/Boton.png");
+    background-position: center;
     cursor: pointer;
     background-size: 50%;
-    width: 200px;
-    height: 70px;
+    width: 300px;
+    height: 100px;
     flex-shrink: 0;
 }
 
@@ -198,7 +204,7 @@ text-align: center;
     border: none;
     background-color: inherit;
     font-family: 'Lugrasimo';
-    text-align:center;
+    text-align: center;
     position: relative;
     background-repeat: no-repeat;
     background-image: url("/src/icons/boton-play-negro.png"); 
@@ -211,5 +217,37 @@ text-align: center;
     flex-shrink: 0;
 }
 
+.audio__control button,
+.audio__control input{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    bottom: 250px;
+    left: 90%;
+    width: 100px; 
+}
+
+/* --- Juan--- */
+
+.example__img, #player__image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 70px;
+    top: 45px;
+    width: 35%;
+    height: 55%;
+}
+
+.container__shark, #shark__gif{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    right: 30%;
+    top: 30%;
+    width: 40%;
+}
 
 

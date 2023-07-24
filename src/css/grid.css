@@ -25,12 +25,12 @@
 }
     
     .aviso img{
-        max-width: 50%;
-        max-height: 50%;
+        max-width: 100%;
+        max-height: 100%;
         margin: 0;
         position: relative;
-        left: 60%;
-        bottom: 40px;
+        left: 90%;
+        bottom: 48px;
     }
     .player__container{
         background-size: 45%;
@@ -59,7 +59,7 @@
     }
     .kill__button__container{
         bottom: 37%;
-        left: 70%;
+        left: 40%;
       
     }
     .kill__button{
@@ -68,7 +68,7 @@
             background-image: url("/src/icons/boton-play-negro.png");
     }
     .next__button__container{
-        left: 3%;
+        right: 40%;
         bottom: 37%;
     }   
     .next__button{
@@ -96,6 +96,31 @@
         background-size: 100%;
         place-content: center;
         visibility: hidden;
+    }
+
+    .audio__control button{
+        left: 10%;
+        bottom: 400px;
+    }
+    .volumen {
+        visibility: hidden;    
+    }
+
+    .example__img, #player__image{
+        justify-content: center;
+        left: 60px;
+        top: 90%;
+        width: 65%;
+        height: 35%;
+    }
+    
+    .container__shark, #shark__gif{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        right: 30%;
+        top: 30%;
+        width: 40%;
     }
 }
 @media screen and (max-width:800px) {

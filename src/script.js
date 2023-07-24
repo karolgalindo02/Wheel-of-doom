@@ -15,10 +15,57 @@ const nextButton = document.getElementById('next__button')
 const overLay = document.getElementById('overlay')
 const continueButton = document.getElementById('btn__continue')
 const playerEliminated = document.getElementsByClassName('player__eliminated')[0]
+const restartButton = document.getElementById('restart__btn')
 let selectPlayer;
 
+/* --- Karol --- */
+// Obtener el elemento de audio
+const audioElement = document.querySelector('audio');
 
+// Función para reproducir/pausar el audio
+function togglePlay() {
+  if (audioElement.paused) {
+    audioElement.play();
+  } else {
+    audioElement.pause();
+  }
+}
 
+// Función para ajustar el volumen del audio
+function setVolume() {
+  const volume = document.getElementById('r').value / 100;
+  audioElement.volume = volume;
+}
+
+/* --- Juan --- */
+const imgMovement = { 
+    container : document.getElementsByClassName('example__img'), 
+    img : document.getElementById('player__image'),
+    leftPosition : 0,
+    topPosition : 0,
+}
+
+const initialValues = {
+    initialLeft : imgMovement.leftPosition = 0,
+    initialTop : imgMovement.topPosition = 0,
+}
+
+continueButton.addEventListener('click', function () {
+    overLay.classList.remove('active')
+    hide()
+})
+
+const shark = document.getElementById('shark__gif')
+
+function hide(){
+    restartButton.style.display = 'none'
+    imgMovement.img.style.display = 'none'
+    shark.style.display = 'none'
+    imgMovement.leftPosition = initialValues.initialLeft;
+    imgMovement.topPosition = initialValues.initialTop;
+}
+
+/* --- Jorge --- */
 function addPlayer(nombre, lista) {
     const player = nombre.value;
     console.log(player)
@@ -42,6 +89,9 @@ function nextPlayer(playersArray, containerPlayer) {
         const winner = playersArray[0];
         console.log('El ganador es: ', winner);
         alert('¡El ganador es: ' + winner + '!')
+        killButton.disabled
+        nextButton.disabled
+        restartButton.style.display = 'flex'
     }
 
     const playerRamdom = Math.floor(Math.random() * playersArray.length); // select player ramdom in array
@@ -70,23 +120,58 @@ function killPlayer(containerPlayer, elimatedPlayer) {
     }
 }
 
+/* --- Juan --- */
 //Event list:
-
-// document.getElementById("save").addEventListener('click', function () {
-//     addPlayer(playersInput, playersList)
-// });
 
 nextButton.addEventListener('click', function () {
     nextPlayer(arrayP, playerContainer)
+    let interval = setInterval(moveImgLeft, 10)
+
+    function moveImgLeft(){
+        imgMovement.img.style.display = 'flex'
+        imgMovement.leftPosition = imgMovement.leftPosition - 1;
+        imgMovement.img.style.left = imgMovement.leftPosition + "px";
+    
+        if ( imgMovement.leftPosition === -240 ) {
+            clearInterval(interval)
+        }
+    }
 })
 
 killButton.addEventListener('click', function () {
     killPlayer(playerContainer, selectPlayer)
+    let interval = setInterval(moveImgDown, 10)
+
+    function moveImgDown(){
+        shark.style.display = 'flex'
+        imgMovement.topPosition = imgMovement.topPosition + 5;
+        imgMovement.img.style.top = imgMovement.topPosition + "px";
+
+        if ( imgMovement.topPosition === 245 ) {
+            clearInterval(interval)
+        }
+    }
 })
+
+continueButton.addEventListener('click', function () {
+    overLay.classList.remove('active')
+})
+
+restartButton.addEventListener('click', function () {
+    location.href = 'index.html'
+})
+
+window.addEventListener('load', hide)
 
 continueButton.addEventListener('click', function(){
     overLay.classList.remove('active')
 })
+
+restartButton.addEventListener('click', function () {
+    location.href = ('index.html')
+})
+
+window.addEventListener('load', hide)
 
 /* --- Karol --- */
 let aviso = document.querySelector(".aviso");
@@ -108,4 +193,15 @@ audioPlayer.addEventListener("ended", () => {
   audioPlayer.play(); // Asegurarnos de que el audio se reproduzca nuevamente después de cambiar la fuente
   console.log(`Reproduciendo: ${audioPlayer.src}`);
 });
-/* --- Juan --- */
+
+function changeFunctionality() {
+    const image = document.getElementById('image');
+    image.src = '/src/icons/silencio.png';
+    image.onclick = changeFunctionality2;
+  }
+
+  function changeFunctionality2() {
+    const image = document.getElementById('image');
+    image.src = '/src/icons/volumen.png';
+    image.onclick = changeFunctionality;
+  }
