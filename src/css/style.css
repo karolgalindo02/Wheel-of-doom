@@ -18,10 +18,38 @@ body {
 	background-position: left top;
 }
 
+/*.volume-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+  }
+  
+  button {
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	cursor: pointer;
+  }
+  
+  #volume-slider {
+	width: 150px;
+	height: 20px;
+	background-color: #ddd;
+	margin: 0 10px;
+	position: relative;
+  }
+  
+  #volume-fill {
+	height: 100%;
+	background-color: #007BFF;
+	width: 50%; /* Volumen inicial (puedes ajustar este valor) */
+  
+
 .content-cabecera{
 	position: absolute;
 	width: 100%;
-	margin-top: 80px;
+	margin-top: 70px;
 	text-align: center;
 }
 
@@ -43,36 +71,37 @@ body {
 main {
 	position: absolute;
 	background-image: url('../Imagenes/cartel-game.png');
-	margin: auto;
-	margin-top: 170px;
+	margin-top: 20px;
 	width: 100%; /* Ajusta el ancho del contenedor según el tamaño de tu imagen */
-	height: 600px; /* Ajusta la altura del contenedor según el tamaño de tu imagen */
-	background-size: contain; /* Cambia a 'contain' para que la imagen se ajuste al contenedor */
+	height: 100vh; /* Ajusta la altura del contenedor según el tamaño de tu imagen */
+	background-size: 370px 385px; /* Cambia a 'contain' para que la imagen se ajuste al contenedor */
 	background-repeat: no-repeat;
 	background-position: center center;
 	z-index: -1;
 }
   
 .content1 {
-	position: relative;
-	height: 70vh;
-	width: 70vw;
+	position: absolute;
+	width: 100%;
+	height: 135vh;
 	display: flex; /* Agrega el display:flex para utilizar justify-content y align-items */
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
   
 .form__container {
-	position: relative;
+	position: absolute;
 	background-image: url(../Imagenes/tablon-1.png);
-	text-align: center;
-	width: 142px;
-	padding: 4px;
+	/*width: 50px;
+	height: 150px;*/
+	padding: 10px 20px;
 	background-repeat: no-repeat;
-	left: 45%;
-	top: 5%; /* Ajusta esta propiedad para centrar verticalmente el form__container */
+	/*left: 70%;
+	top: 69%; /* Ajusta esta propiedad para centrar verticalmente el form__container */
 	transform: translate(-50%, -50%);
-	background-size: contain;
+	background-size: 160px 30px;
+	margin-bottom: 290px;
 }
   
 #players__input {
@@ -82,12 +111,11 @@ main {
 .container__list {
 	position: absolute;
 	background-image: url(../Imagenes/tablon-2.png);
-	text-align: center;
 	width: 150px;
-	height: 165px;
+	height: 20vh;
 	background-repeat: no-repeat;
-	left: 69%;
-	top: 69%; /* Ajusta esta propiedad para centrar verticalmente el container__list */
+	/*left: 69%;
+	top: 95%; /* Ajusta esta propiedad para centrar verticalmente el container__list */
 	transform: translate(-50%, -50%);
 	background-size: contain;
 }
@@ -118,7 +146,7 @@ main {
 
 .content2 {
 	position: absolute;
-	bottom: 80px;
+	bottom: 60px;
 	left: 50%;
 	transform: translateX(-50%);
 	margin: 0;
@@ -128,12 +156,7 @@ main {
 	align-items: center;
   }
   
-  .content2 img {
-	height: 70px;
-  }
-  
   .buttonPlay {
-	margin-left: 10px;
 	padding: 10px 18px;
 	background-color: transparent;
 	font-family: 'Lugrasimo';
@@ -161,3 +184,15 @@ main {
 	background-repeat: repeat-x;
 	background-position: left bottom;
 }
+
+/* Mobile 
+@media (max-width: 575px) {}
+
+/* Tablet 
+@media (min-width: 576px) and (max-width: 767px) {}
+
+/* Desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Modo horizontal 
+@media (min-width: 992px) and (orientation: landscape) {}
