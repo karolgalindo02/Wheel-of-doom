@@ -15,6 +15,7 @@ button{
 body {
 	background-color: #000000;
 	margin: 0px;
+	
 }
 /* jorge */
 
@@ -30,6 +31,12 @@ body {
     animation-iteration-count: infinite;
 }
 
+@keyframes mianimacion {
+	0% {left: 0%; top: 0px;}
+	100%{ left: 60%; top: 0px;}
+	}
+	
+
 
 #muteIcon{
 	width: 20%;
@@ -37,20 +44,13 @@ body {
 }
 
 #muteButton{
-	color: black;
-	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	right: 35%;
+	width: 100%;
 }
 
 
-@keyframes mianimacion {
-0% {left: 0%; top: 0px;}
-100%{ left: 60%; top: 0px;}
-
-}
 
 .content-logo{
 	display: flex;
@@ -71,12 +71,12 @@ section{
 }
 
 .content1{
-	position: absolute;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 55%;
+	margin-top: 35%;
 	gap: 10px;
+	height: 40%;
 }
 
 .form__container{
@@ -132,7 +132,7 @@ section{
 	background-color: rgba(255, 255, 255, 0.3);
 	margin-left: 10%;
 	width: 80%;
-	height: 60%;
+	height: 40%;
 	overflow: auto; 
 }
 
@@ -164,13 +164,21 @@ section{
 
 
 /* Mobile */
-@media (max-width: 575px) {}
+@media (max-width: 575px) {
+	.content1{
+		margin-top: 25%;
+	}
+}
 
 /* Tablet */
 @media (min-width: 576px) and (max-width: 900px) {
 	section{
 	flex-direction: row;
 	background: url('../Imagenes/cartel.png') center center / 100% 100% ;
+	}
+
+	.content1{
+		margin-top: 0%;
 	}
 }
 
