@@ -5,14 +5,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Wheel of Doom</title>
+	<title>Wheel Of Pirates</title>
 	<link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/grid.css">
+	<link rel="icon" type="image/png" href="src/Imagenes/logo-blanco.png">
 </head>
 
 
 <body>
-<audio autoplay>
+<audio  id="music" autoplay loop>
 	<source src="src/Sonidos/WheelofPirates.mp3" type="audio/mpeg">
 </audio>
 <!-- JJulian-->
@@ -44,12 +45,17 @@
 				</ul>
 			</div>
 		</div>
+		<button id="muteButton" onclick="toggleMute()">
+			<img id="muteIcon" src="src/Imagenes/Sone_black.png" alt="Mute">
+			Music
+		</button>
 	</div>
+
 </section>
 
 <div class="container_imagen_play">
 	<img src="src/Imagenes/Garfio.png" alt="Garfio">
-	<button class="buttonPlay">Play</button>
+	<a href="game.html"  class="buttonPlay"><button>Play</button></a>
 </div>
 
 
