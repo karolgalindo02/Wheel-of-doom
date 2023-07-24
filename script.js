@@ -40,10 +40,10 @@ function toggleMute() {
 
 if (music.muted) {
     music.muted = false;
-    muteIcon.src = "src/Imagenes/Sone_black.png"; // Cambiar al icono de sonido activado
+    muteIcon.src = "src/Imagenes/Sone.png"; // Cambiar al icono de sonido activado
 } else {
     music.muted = true;
-    muteIcon.src = "src/Imagenes/Mute_black.png"; // Cambiar al icono de silencio activado
+    muteIcon.src = "src/Imagenes/Mute.png"; // Cambiar al icono de silencio activado
 }
 }
 
