@@ -47,6 +47,19 @@ document.getElementById("save").addEventListener('click', function () {
     addPlayer(playersInput, playersList)
 });
 
+function toggleMute() {
+    var music = document.getElementById("music");
+    var muteIcon = document.getElementById("muteIcon");
+
+if (music.muted) {
+    music.muted = false;
+    muteIcon.src = "src/Imagenes/Sone.png"; // Cambiar al icono de sonido activado
+} else {
+    music.muted = true;
+    muteIcon.src = "src/Imagenes/Mute.png"; // Cambiar al icono de silencio activado
+}
+}
+
 document.getElementById('play').addEventListener('click', function () {
     players = [];
     const listItems = playersList.getElementsByClassName('list_item');

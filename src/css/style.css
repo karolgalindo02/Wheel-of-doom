@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+*{
+	font-family: 'Lugrasimo', Helvetica, sans-serif;
+	color: white;
+}
+
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+
 /* General styles */
 body {
 	background-color: #e5e7eb;
@@ -38,7 +51,7 @@ body {
 
 .AnclayEspadas {
 	height: 100%;
-	width: auto;
+	width: 40%;
 	animation-name: mianimacion;
 	animation-duration: 1s;
 	animation-delay: 1s;
@@ -48,57 +61,236 @@ body {
 	animation-iteration-count: infinite;
 }
 
-
-
 @keyframes mianimacion {
-	0% {
-		left: 0%;
-		top: 0px;
+	0% {left: 0%; top: 0px;}
+	100%{ left: 60%; top: 0px;}
 	}
+	
 
-	100% {
-		left: 70%;
-		top: 0px;
-	}
 
+#muteIcon{
+	width: 20%;
+	height: 20%;
 }
 
-.contenedor__grande {
+#muteButton{
+	display: inline-block;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+
+
+.content-logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+/* -- Prueba Andrews --*/
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('../Imagenes/cartel-game.png') center center / 100% 100% no-repeat;
+	height: 60vh; 
+	width: 100%;
+}
+
+.content1{
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: auto;
-	/* Establecer la imagen de fondo */
-	background-image: url('../Imagenes/cartel-game.png');
-
-	/* Ajustar el tamaño de la imagen */
-	background-size: 50% 100%;
-	/* Opciones: 'contain', 'cover', 'auto', etc. */
-
-	/* Repetir la imagen si es más pequeña que el contenedor */
-	background-repeat: no-repeat;
-	/* Opciones: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat', etc. */
-
-	/* Posición de la imagen */
-	background-position: center center;
-	/* Puedes ajustar esto según tus preferencias */
-	/* Altura del div */
-	height: 80vh;
-	/* Ajusta la altura según tus necesidades */
-	width: 100vw;
+	margin-top: 35%;
+	gap: 10px;
+	height: 40%;
 }
 
-.form__container {
-	margin-top: 10%;
+.form__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(../Imagenes/tablon-1.png) center center / 100% 100% no-repeat;
+	text-align: center;
+	padding: 1%;
+	width: 70%;
+
+}
+
+.form__list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	padding: 2%;
+}
+
+.form__container button{
+	background-color: rgba(255, 255, 255, 0.3);
+	border: none;
+	cursor: pointer;
+	color: white;
+}
+
+.form__container input{
+	background-color: rgba(255, 255, 255, 0.3);
+	border: none;
+	width: 80%;
+}
+
+#players__input::placeholder {
+	color: white;
+	font-size: 70%;
+	text-align: center;
 }
 
 
 
+.container__list{
+	font-size: 60%;
+	background: url(../Imagenes/tablon-2.png) center center / 100% 100% no-repeat;
+	text-align: center;
+	width: 70%;
+	height: 15vh;
+	
+}
 
+.container__players{
+	background-color: rgba(255, 255, 255, 0.3);
+	margin-left: 10%;
+	width: 80%;
+	height: 40%;
+	overflow: auto; 
+}
+
+
+
+.container_imagen_play{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1%;
+}
+
+.container_imagen_play img{
+	width: 15%;
+	height: 15%;
+}
+
+.buttonPlay{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 120%;
+	background: url('../Imagenes/boton-play-blanco.png') center center / 100% 100% no-repeat;
+	width: 40%;
+	height: 5vh;
+	text-align: center;
+}
+
+
+
+/* Mobile */
+@media (min-width: 480px) and  (max-height: 320px){
+	section{
+		background: url('../Imagenes/logo-blanco.png') center center / 100% 100% ;
+		}
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1400px) {
+
+	section{
+	position: relative;
+	background: url('../Imagenes/cartel.png') center center / 100% 100% ;
+	}
+
+	.content1{
+		position: absolute;
+		margin-top: 0%;
+		left: 35%;
+	}
+
+	main{
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		grid-template-rows: auto auto;
+	}
+
+	#muteIcon{
+		width: 40%;
+		height: 60%;
+	}
+
+	.AnclayEspadas{
+		width: 15%;
+	}
+
+	.content-logo img{
+		width: 40%;
+	}
+
+	.content-logo h2{
+		font-size: 80%;
+	}
+
+	.container_imagen_play img {
+		width: 20%;
+		height: 30%;
+	}
+
+	button{
+		font-size: 60%;
+
+	}
+
+	.container__list{
+		font-size: 50%;
+		width: 70%;
+		height: 100%;
+	}
+
+	.form__container{
+		height: 60%;
+	}
+
+	.container__players{
+		width: 80%;
+		height: 40%;
+	}
+
+
+	.form__container button{
+		height: 100%;
+	}
+	
+	.form__container input{
+		height: 90%;
+	}
+	
+	#players__input::placeholder {
+		font-size: 60%;
+	}
+
+	.form__list{
+		height: 70%;
+	}
+	
+
+}
+
+
+
+/* Desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+} */
 
 /* -- Melany --*/
 
 /* --- JJulian --- */
-
-/* Wheel of Pirates */
