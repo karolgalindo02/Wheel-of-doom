@@ -15,6 +15,9 @@ function nextPlayer(playersArray, containerPlayer) {
         const winner = playersArray[0];
         console.log('El ganador es: ', winner);
         alert('¡El ganador es: ' + winner + '!')
+        nextButton.disabled = true;
+        killButton.disabled = true;
+        return;
     }
 
     const playerRamdom = Math.floor(Math.random() * playersArray.length); // select player ramdom in array
@@ -27,6 +30,8 @@ function nextPlayer(playersArray, containerPlayer) {
     newNameElement.classList.add('name')
     containerPlayer.appendChild(newNameElement);
     console.log(playersArray)
+    killButton.disabled = false;
+    nextButton.disabled = true;
 
 }
 
@@ -40,6 +45,10 @@ function killPlayer(containerPlayer, elimatedPlayer) {
             overLay.classList.add('active');
         }, 2000);
         playerEliminated.textContent = elimatedPlayer + ' ha muerto'
+        continueButton.disabled = false;
+
+        killButton.disabled = true;
+        nextButton.disabled = false;
     }
 }
 
@@ -58,3 +67,4 @@ killButton.addEventListener('click', function () {
 continueButton.addEventListener('click', function () {
     overLay.classList.remove('active')
 })
+nextButton.disabled = false;
