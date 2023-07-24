@@ -6,21 +6,23 @@ body {
 
 /* jorge */
 
-.list_item{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  margin-bottom: 10px;
-  padding: 5px;
-  
+.list_item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	margin-bottom: 10px;
+	padding: 5px;
+
 }
-.players__list{
-  margin: 0;
-  padding: 0;
+
+.players__list {
+	margin: 0;
+	padding: 0;
 }
-.delete_button{
-  font-size: 15px;
+
+.delete_button {
+	font-size: 15px;
 }
 
 
