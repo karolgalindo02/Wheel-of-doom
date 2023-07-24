@@ -44,6 +44,7 @@ body {
 }
 
 #muteButton{
+	display: inline-block;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -164,22 +165,92 @@ section{
 
 
 /* Mobile */
-@media (max-width: 575px) {
-	.content1{
-		margin-top: 25%;
-	}
+@media (min-width: 480px) and  (max-height: 320px){
+	section{
+		background: url('../Imagenes/logo-blanco.png') center center / 100% 100% ;
+		}
 }
 
 /* Tablet */
-@media (min-width: 576px) and (max-width: 900px) {
+@media (min-width: 480px) and (max-width: 900px) {
+
 	section{
-	flex-direction: row;
+	position: relative;
 	background: url('../Imagenes/cartel.png') center center / 100% 100% ;
 	}
 
 	.content1{
+		position: absolute;
 		margin-top: 0%;
+		left: 35%;
 	}
+
+	main{
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		grid-template-rows: auto auto;
+	}
+
+	#muteIcon{
+		width: 40%;
+		height: 60%;
+	}
+
+	.AnclayEspadas{
+		width: 15%;
+	}
+
+	.content-logo img{
+		width: 40%;
+	}
+
+	.content-logo h2{
+		font-size: 80%;
+	}
+
+	.container_imagen_play img {
+		width: 20%;
+		height: 30%;
+	}
+
+	button{
+		font-size: 60%;
+
+	}
+
+	.container__list{
+		font-size: 50%;
+		width: 70%;
+		height: 100%;
+	}
+
+	.form__container{
+		height: 60%;
+	}
+
+	.container__players{
+		width: 80%;
+		height: 40%;
+	}
+
+
+	.form__container button{
+		height: 100%;
+	}
+	
+	.form__container input{
+		height: 90%;
+	}
+	
+	#players__input::placeholder {
+		font-size: 60%;
+	}
+
+	.form__list{
+		height: 70%;
+	}
+	
+
 }
 
 
