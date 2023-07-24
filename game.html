@@ -6,23 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/icons/icon.png" type="image/x-icon">
 	<title>Wheel of Doom</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lugrasimo">
 	<link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/game.css">
-    <link rel="stylesheet" href="./src/css/grid.css">
 	<link rel="stylesheet" href="./src/css/game.scss">
+    <link rel="stylesheet" href="./src/css/grid.css">
 </head>
 <body>
-
 <!-- Karol -->
 <main id="hero">
-	<audio src="./src/music/Barco Pirata.mp3" autoplay loop></audio>
+	<audio src="./src/music/Barco Pirata.mp3" autoplay loop id="background-sound"></audio>
 <!--Header-->
 <div class="logo-game">
 		<div class="logo"><img src="/src/icons/logo-negro.png"></div>
 	<h3 class="title__list"> Wheel of Pirates </h3>
+	<!--Ventana Game-->
 </div>
 
-<!--Ventana Game-->
 <label for="btn-play" class="play">Play</label>
 <input id="btn-play" type="checkbox">
 
@@ -38,12 +38,13 @@
 		</div>
 		<div class="example__img" >
 			<img src="/src/img/pirata.png" alt="" id="player__image" >
+		    <div class="table"><img src="/src/img/table.png"></div>
 		</div>
 	<div class="container__shark">
 			<img src="/src/motion/sharks.gif" alt="" id="shark__gif"></img>
 		</div> 
 	<div class="player__container"></div>
-	<div class="aviso"><img src="/src/motion/loro.gif"></div>
+	<div class="aviso"><img src="/src/motion/loro.gif" onclick="loro()"></div>
 	<audio src="" class="audio-player"></audio>
 	
 	<div class="kill__button__container">

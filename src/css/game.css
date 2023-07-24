@@ -46,11 +46,12 @@
     z-index: 100;
 }
 .aviso img{
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 150%;
+    max-height: 150%;
     bottom: 70px;
     position: relative;
     cursor: pointer;
+    right: 150%;
 }
 
 .container-game label{
@@ -205,6 +206,7 @@ text-align: center;
     background-color: inherit;
     font-family: 'Lugrasimo';
     text-align: center;
+    display: inline-block;
     position: relative;
     background-repeat: no-repeat;
     background-image: url("/src/icons/boton-play-negro.png"); 
@@ -213,8 +215,24 @@ text-align: center;
     background-size: 50%;
     width: 250px;
     height: 100px;
-    margin: none;
-    flex-shrink: 0;
+    margin: 0px 10px;
+}
+
+.restart__btn{
+    border: none;
+    background-color: inherit;
+    font-family: 'Lugrasimo';
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url("/src/icons/boton-play-negro.png"); 
+    background-position: center;
+    cursor: pointer;
+    background-size: 50%;
+    width: 250px;
+    height: 100px;
+    margin: 0px 10px;
 }
 
 .audio__control button,
@@ -231,23 +249,31 @@ text-align: center;
 
 /* --- Juan--- */
 
-.example__img, #player__image{
+#player__image{
     position: relative;
-    display: flex;
+    display: block;
     justify-content: center;
-    left: 70px;
-    top: 45px;
-    width: 35%;
-    height: 55%;
+    left: 40%;
+    width: 15%;
+    height: 25%;
+    margin: 0px;
 }
 
 .container__shark, #shark__gif{
     position: relative;
-    display: flex;
+    display: block;
     justify-content: center;
     right: 30%;
-    top: 30%;
-    width: 40%;
+    width: 70%;
+    top: 35%;
 }
-
-
+.example__img{
+    position: relative;
+    left: 40%;
+    top: 10%;
+}
+.table img{
+    width: 35%;
+    height: 35%;
+    display: block;
+}

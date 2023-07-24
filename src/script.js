@@ -149,6 +149,9 @@ killButton.addEventListener('click', function () {
 
         if ( imgMovement.topPosition === 245 ) {
             clearInterval(interval)
+            playDeathSound();
+
+            playAhoySound();
         }
     }
 })
@@ -174,25 +177,6 @@ restartButton.addEventListener('click', function () {
 window.addEventListener('load', hide)
 
 /* --- Karol --- */
-let aviso = document.querySelector(".aviso");
-let audioPlayer = document.querySelector(".audio-player");
-
-aviso.addEventListener("click", () => {
-  if (!audioPlayer.paused) {
-    audioPlayer.pause();
-  }
-  audioPlayer.setAttribute(".src","music/loro.mp3");
-  audioPlayer.loop = false;
-  audioPlayer.play();
-  console.log(`Reproduciendo: ${audioPlayer.src}`);
-});
-
-audioPlayer.addEventListener("ended", () => {
-  audioPlayer.setAttribute(".src","music/Barco Pirata.mp3");
-  audioPlayer.loop = true;
-  audioPlayer.play(); // Asegurarnos de que el audio se reproduzca nuevamente después de cambiar la fuente
-  console.log(`Reproduciendo: ${audioPlayer.src}`);
-});
 
 function changeFunctionality() {
     const image = document.getElementById('image');
@@ -200,8 +184,21 @@ function changeFunctionality() {
     image.onclick = changeFunctionality2;
   }
 
-  function changeFunctionality2() {
-    const image = document.getElementById('image');
-    image.src = '/src/icons/volumen.png';
-    image.onclick = changeFunctionality;
+const backgroundMusic = document.getElementById('background-sound');
+const sonido = document.querySelector('.audio-player');
+const ahoySound = new Audio('./src/music/ahoy.mp3');
+const deathSound = new Audio('./src/music/muerte.mp3');
+
+function loro() {
+  sonido.src = './src/music/loro.mp3';
+  sonido.play();
+}
+
+function playAhoySound() {
+  ahoySound.play();
+  backgroundMusic.play();
+}
+
+function playDeathSound() {
+    deathSound.play();
   }
