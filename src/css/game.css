@@ -35,12 +35,13 @@
 }
 
 .container-game{
+    
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0; left: 0;
     background-image: url("/src/img/imagen\ 6.png");
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
@@ -63,12 +64,12 @@ top: 8%;
     cursor: pointer;
 }
 
-#btn-play:checked ~ .container-game{
+/* #btn-play:checked ~ .container-game{
     display: flex;
 }
 #btn-play:checked{
     display: none;
-}
+} */
 
 /* Fondo animado */
 video{
