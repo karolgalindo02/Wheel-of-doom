@@ -7,6 +7,7 @@ const overLay = document.getElementById('overlay')
 const continueButton = document.getElementById('btn__continue')
 const restartButton = document.getElementById('restart__btn')
 const playerEliminated = document.getElementsByClassName('player__eliminated')[0]
+const shark = document.getElementById('shark__gif')
 let selectPlayer;
 
 const imgMovement = { 
@@ -20,8 +21,6 @@ const initialValues = {
     initialTop : imgMovement.topPosition = 0,
 }
 
-const shark = document.getElementById('shark__gif')
-
 function hide(){
     restartButton.style.display = 'none';
     imgMovement.img.style.display = 'none';
@@ -29,6 +28,8 @@ function hide(){
 
     imgMovement.leftPosition = initialValues.initialLeft;
     imgMovement.topPosition = initialValues.initialTop;
+    imgMovement.img.style.top = imgMovement.topPosition + "px";
+
 
     console.log(imgMovement)
 }
@@ -81,6 +82,7 @@ nextButton.addEventListener('click', function () {
     
         if ( imgMovement.leftPosition === -240 ) {
             clearInterval(interval)
+            console.log(imgMovement.topPosition)
         }
     }
 })
@@ -96,6 +98,8 @@ killButton.addEventListener('click', function () {
 
         if ( imgMovement.topPosition === 250 ) {
             clearInterval(interval)
+            imgMovement.img.style.display = 'none';
+            console.log(imgMovement.topPosition)
         }
     }
 })
@@ -103,6 +107,7 @@ killButton.addEventListener('click', function () {
 continueButton.addEventListener('click', function () {
     overLay.classList.remove('active')
     hide()
+    console.log(imgMovement.topPosition)
 })
 
 restartButton.addEventListener('click', function () {
