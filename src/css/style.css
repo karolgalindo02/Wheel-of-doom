@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
 *{
 	font-family: 'Lugrasimo', Helvetica, sans-serif;
-	color: black;
 }
 
 button{
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+	color: white;
 }
 
 
@@ -15,6 +15,7 @@ button{
 body {
 	background-color: #000000;
 	font-family: 'Lugrasimo';
+	color: white;
 }
 
 /* jorge */
@@ -26,7 +27,6 @@ body {
 	list-style: none;
 	margin-bottom: 10px;
 	padding: 5px;
-
 }
 
 .players__list {
@@ -39,16 +39,10 @@ body {
 }
 
 
-/* -- Prueba Andrews --*/
 
 .animacion-arriba {
-	display: block;
-	overflow-x: hidden;
-    background-repeat: repeat-x;
-	/* background-color: black; */
 	width: 100%;
 	height: 10%;
-	margin-bottom: 1%;
 }
 
 .AnclayEspadas {
@@ -91,9 +85,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 }
-.content-logo h2{
-	color: antiquewhite;
-}
+
 
 /* -- Prueba Andrews --*/
 section{
