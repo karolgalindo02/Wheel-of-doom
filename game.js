@@ -1,7 +1,3 @@
-var elementToChange = document.getElementsByTagName("body")[0];
-elementToChange.style.cursor = "url('/src/icons/garfio.cur'), auto";
-
-// jorge
 const arrayP = ['jorge', 'karol', 'jjulian', 'andrews', 'carlos', 'melany', 'juan']
 
 const killButton = document.getElementById('kill__button')
@@ -110,6 +106,12 @@ function changeFunctionality() {
     const image = document.getElementById('image');
     image.src = '/src/icons/silencio.png';
     image.onclick = changeFunctionality2;
+    }
+
+function changeFunctionality() {
+    const image = document.getElementById('image');
+    image.src = '/src/icons/silencio.png';
+    image.onclick = changeFunctionality2;
 }
 
 
@@ -118,10 +120,9 @@ function loro() {
     sonido.play();
 }
 
-function playAhoySound() {
-    ahoySound.play();
-    backgroundMusic.play();
-}
+function playDeathSound() {
+    deathSound.play();
+    }
 
 function playDeathSound() {
     deathSound.play();
