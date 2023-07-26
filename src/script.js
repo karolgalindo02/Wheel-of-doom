@@ -63,6 +63,7 @@ function hide(){
     shark.style.display = 'none'
     imgMovement.leftPosition = initialValues.initialLeft;
     imgMovement.topPosition = initialValues.initialTop;
+    imgMovement.img.style.top = imgMovement.topPosition + "px";
 }
 
 /* --- Jorge --- */

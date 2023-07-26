@@ -40,18 +40,18 @@
     position: fixed;
     top: 0; left: 0;
     background-image: url("/src/img/imagen\ 6.png");
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
 }
 .aviso img{
-    max-width: 150%;
-    max-height: 150%;
+    max-width: 65%;
+    max-height: 65%;
     bottom: 70px;
     position: relative;
     cursor: pointer;
-    right: 150%;
+    left: 100%;
 }
 
 .container-game label{
@@ -61,13 +61,6 @@ top: 8%;
     background-repeat: no-repeat;
     background-image: url("/src/icons/boton-play-negro.png");
     cursor: pointer;
-}
-
-#btn-play:checked ~ .container-game{
-    display: flex;
-}
-#btn-play:checked{
-    display: none;
 }
 
 /* Fondo animado */
@@ -248,32 +241,35 @@ text-align: center;
 }
 
 /* --- Juan--- */
+.table{
+    display: block;
+    position: absolute;
+    left: 40%;
+    bottom: 35%;
+}
+.table img{
+    width: 35%;
+    height: 20%;
+}
 
-#player__image{
-    position: relative;
+.example__img, #player__image{
+    left: 40%;
+    width: 40%;
+    height: 50%;
+    top: 10%;
+    position:absolute;
     display: block;
     justify-content: center;
-    left: 40%;
-    width: 15%;
-    height: 25%;
     margin: 0px;
 }
 
 .container__shark, #shark__gif{
-    position: relative;
-    display: block;
-    justify-content: center;
     right: 30%;
     width: 70%;
     top: 35%;
-}
-.example__img{
-    position: relative;
-    left: 40%;
-    top: 10%;
-}
-.table img{
-    width: 35%;
-    height: 35%;
+    position: absolute;
     display: block;
+    justify-content: center;
+    margin: 0px;
 }
+
