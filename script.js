@@ -68,5 +68,6 @@ document.getElementById('play').addEventListener('click', function () {
         players.push(playersName)
     }
     console.log(players)
-
+    localStorage.setItem('playersData', JSON.stringify(players));
 })
+

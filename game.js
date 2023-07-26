@@ -1,4 +1,6 @@
-const arrayP = ['jorge', 'karol', 'jjulian', 'andrews', 'carlos', 'melany', 'juan']
+// const arrayP = ['jorge', 'karol', 'jjulian', 'andrews', 'carlos', 'melany', 'juan']
+const playersData = localStorage.getItem('playersData');
+const arrayP = JSON.parse(playersData);
 
 const killButton = document.getElementById('kill__button')
 var playerContainer = document.getElementsByClassName('player__container')[0]
